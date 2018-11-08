@@ -76,6 +76,13 @@ hr {
     p {
         margin: auto 10%;
     }
+    #header-outer {
+        display: block;
+        margin-top: 120px;
+    }
+    #tagline {
+        transform: translateY(-40vh);
+    }
 }
 
 #footer-image {
