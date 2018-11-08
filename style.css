@@ -37,10 +37,14 @@ h2 {
 }
 
 #header-outer {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#tagline {
+    height: 10vh;
 }
 
 #header-box {
