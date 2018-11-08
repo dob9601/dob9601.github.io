@@ -76,12 +76,11 @@ hr {
     p {
         margin: auto 10%;
     }
-    #header-outer {
+    #tagline-mobile {
         display: block;
-        margin-top: 120px;
     }
-    #tagline {
-        transform: translateY(-50vh);
+    #tagline-desktop {
+        display: none;
     }
 }
 
