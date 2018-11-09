@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
         <link href="animate.min.css" rel="stylesheet">
+        <script src="js/smoothScroll.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -19,12 +20,16 @@
             </div>
         </div>
         <div id="tagline">
-            <p class="animated fadeInDown slow delay-1s" id="tagline-desktop"><i>A witty tagline would go here but instead I'll let you laugh at my own self-awareness.</i></p>
+            <ul class="animated fadeInDown slow delay-1s" id="tagline-desktop">
+                <li><a href="#about">About</a></li><!--
+             --><li><a href="#projects">Projects</a></li><!--
+             --><li><a href="#online">Online</a></li>
+            </ul>
         </div>
-        <h2>About Me</h2>
+        <h2 id="about">About Me</h2>
         <p>Hi, my name is Daniel and I am a British student with a passion for software development and a slight aptitude for design. I currently specialize in full-stack webapp development but my interest lies within neural networks and machine learning. For this reason, I have self-taught myself the principles behind Artificial Neural Networks and Convolutional Neural Networks.</p>
         <hr>
-        <h2>Current Projects</h2>
+        <h2 id="projects">Current Projects</h2>
         <p>Below are some projects I have worked on over the years:</p>
         <ul id="current-projects">
             <li class="project"><a href="https://github.com/dob9601/CollaboDev" target="_blank">
@@ -41,9 +46,10 @@
             </a></li>
         </ul>
         <hr>
-        <h2>Find Me Online</h2>
+        <h2 id="online">Find Me Online</h2>
         <hr>
         <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries at dob9601@gmail.com</a></i></p>
         <img id="footer-image" src="footer.png">
+        <script>var scroll = new SmoothScroll('a[href*="#"]', {easing: 'easeInOutQuad'})</script>
     </body>
 </html>
