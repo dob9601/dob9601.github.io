@@ -156,6 +156,10 @@ hr {
     margin: 10px;
 }
 
+.logo-social {
+    height: 50px;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
