@@ -118,7 +118,18 @@ hr {
         margin: auto 10%;
     }
     #header {
-        grid-template-columns: 225px;
+        grid-template-columns: 250px;
+        margin-top: 50px;
+    }
+    #header-box {
+        margin-bottom: 20px;
+    }
+    #header-outer {
+        align-items: flex-start;
+        height: 100vh;
+    }
+    #tagline {
+        transform: translateY(-20vh);
     }
 }
 
