@@ -34,6 +34,7 @@ h2 {
 
 #llama-image {
     width: 200px;
+    margin: auto;
 }
 
 #header {
@@ -83,11 +84,6 @@ hr {
     border-top: 1px solid #ef473a;
 }
 
-#tagline-mobile {
-    display: none;
-    margin-top: 40px;
-}
-
 .tagline {
     list-style: none;
     padding: 0;
@@ -121,11 +117,8 @@ hr {
     p {
         margin: auto 10%;
     }
-    #tagline-mobile {
-        display: block;
-    }
-    #tagline-desktop {
-        display: none;
+    #header {
+        grid-template-columns: 225px;
     }
 }
 
