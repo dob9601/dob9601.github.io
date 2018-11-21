@@ -130,6 +130,13 @@ hr {
     }
     #tagline {
         transform: translateY(-20vh);
+        font-size: 0.9em;
+    }
+    #tagline ul li {
+        padding: 8px 0;
+    }
+    #tagline ul a {
+        padding: 8px 20px;
     }
 }
 
