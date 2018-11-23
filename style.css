@@ -40,11 +40,8 @@ h2 {
 #header {
     display: grid;
     grid-template-columns: 225px 200px;
-    background-image: url("header-background.png");
     background-size: 100%;
     padding: 10px;
-    border-radius: 30px;
-    color: #feceb7;
 }
 
 #header-outer {
