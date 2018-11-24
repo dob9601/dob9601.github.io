@@ -51,8 +51,7 @@ h2 {
   align-items: center;
 }
 
-#tagline {
-  height: 0;
+#tagline-desktop {
   transform: translateY(-12vh);
 }
 
@@ -110,14 +109,19 @@ hr {
   color: #feceb7;
 }
 
+#tagline-mobile {
+  display: none;
+  margin-top: 50px;
+}
+
 @media only screen and (max-width: 700px) {
   p {
     margin: auto 10%;
   }
 
   #header {
-    grid-template-columns: 250px;
-    margin-top: 50px;
+    grid-template-columns: 100%;
+    width: 100%;
   }
 
   #header-box {
@@ -125,21 +129,15 @@ hr {
   }
 
   #header-outer {
-    align-items: flex-start;
     height: 100vh;
   }
 
-  #tagline {
-    transform: translateY(-20vh);
-    font-size: 0.9em;
+  #tagline-desktop {
+    display: none;
   }
 
-  #tagline ul li {
-    padding: 8px 0;
-  }
-
-  #tagline ul a {
-    padding: 8px 20px;
+  #tagline-mobile {
+    display: block;
   }
 }
 
