@@ -28,6 +28,12 @@ h2 {
   font-size: 2em;
 }
 
+#particle-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
 #fullname-text {
   margin: 0;
 }
@@ -41,7 +47,8 @@ h2 {
   display: grid;
   grid-template-columns: 225px 200px;
   background-size: 100%;
-  padding: 10px;
+  border-radius: 800px;
+  background-color: #feceb7;
 }
 
 #header-outer {
@@ -53,6 +60,8 @@ h2 {
 
 #tagline-desktop {
   transform: translateY(-12vh);
+  display: flex;
+  justify-content: center;
 }
 
 #header-box {
@@ -82,7 +91,9 @@ hr {
 
 .tagline {
   list-style: none;
-  padding: 0;
+  background-color: #feceb7;
+  padding: 10px;
+  margin: 0;
 }
 
 .tagline li:first-child {
@@ -112,6 +123,7 @@ hr {
 #tagline-mobile {
   display: none;
   margin-top: 50px;
+  font-size: 0.9em;
 }
 
 @media only screen and (max-width: 700px) {
@@ -122,11 +134,15 @@ hr {
   #header {
     grid-template-columns: 100%;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 100px; /* Safari related issue */
+    background-color: transparent;
+    justify-items: center;
   }
 
   #header-box {
     margin-bottom: 20px;
+    background-color: #feceb7;
+    border-radius: 800px;
   }
 
   #header-outer {

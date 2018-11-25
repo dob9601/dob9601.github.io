@@ -6,9 +6,11 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
         <link href="animate.min.css" rel="stylesheet">
         <script src="js/smoothScroll.js"></script>
+        <script src="js/particles.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <div id="particle-background"></div>
         <div id="header-outer">
             <div id="header" class="animated fadeInDown slow">
                 <div class="header-elements" id="header-box">
@@ -18,7 +20,7 @@
                     </div>
                 </div>
                 <img class="header-elements" id="llama-image" src="llama.png"></img>
-                <div id="tagline-mobile" class="tagline">
+                <div id="tagline-mobile">
                     <ul class="tagline animated fadeInDown slower delay-1s">
                         <li><a href="#about">About</a></li><!--
                      --><li><a href="#projects">Projects</a></li><!--
@@ -27,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div id="tagline-desktop" class="tagline">
+        <div id="tagline-desktop">
             <ul class="tagline animated fadeInDown slower delay-1s">
                 <li><a href="#about">About</a></li><!--
              --><li><a href="#projects">Projects</a></li><!--
@@ -62,6 +64,9 @@
         <hr>
         <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries at dob9601@gmail.com</a></i></p>
         <img id="footer-image" src="footer.png">
-        <script>var scroll = new SmoothScroll('a[href*="#"]', {easing: 'easeInOutQuad'})</script>
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {easing: 'easeInOutQuad'})
+            particlesJS.load('particle-background', 'assets/particles.json')
+        </script>
     </body>
 </html>
