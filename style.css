@@ -32,7 +32,7 @@ h2 {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 #fullname-text {
