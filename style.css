@@ -3,6 +3,12 @@
   color: #feceb7;
 }
 
+#header-outer *::selection,
+.tagline *::selection {
+  background-color: transparent;
+  color: #ef4539;
+}
+
 html {
   height: 100%;
   margin: 0;
