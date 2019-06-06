@@ -42,14 +42,14 @@ h2 {
   font-size: 2em;
 }
 
-#particle-background {
+#background {
   position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: #feceb7;
 }
 
-#particle-background img {
+#background img {
   position: absolute;
   width: 100vw;
   bottom: 0;
@@ -82,12 +82,6 @@ h2 {
 #header-offset {
   height: 50vh;
   width: 100vw;
-}
-
-#tagline-desktop {
-  transform: translateY(-12vh);
-  display: flex;
-  justify-content: center;
 }
 
 #header-box {
@@ -141,7 +135,7 @@ hr {
     height: 15vh;
   }
 
-  #particle-background {
+  #background {
     height: 90vh;
   }
 }
