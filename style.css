@@ -117,7 +117,7 @@ hr {
 
 @media only screen and (max-width: 700px) {
   p {
-    margin: auto 10%;
+    margin: 20px;
   }
 
   #header {
@@ -134,21 +134,21 @@ hr {
   }
 
   #header-outer {
-    height: 100vh;
+    height: 80vh;
   }
 
-  #tagline-desktop {
-    display: none;
+  #header-offset {
+    height: 15vh;
   }
 
-  #tagline-mobile {
-    display: block;
+  #particle-background {
+    height: 90vh;
   }
 }
 
 #footer-text {
   font-size: 1.2em;
-  margin: auto 2% 50px 2%;
+  margin: auto 20px 50px 20px;
 }
 
 #current-projects {
@@ -163,6 +163,10 @@ hr {
   transition: background-color 500ms cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 
+.project a {
+  text-decoration: none;
+}
+
 .project:hover {
   background-color: #ffae87;
 }
@@ -172,7 +176,7 @@ hr {
 }
 
 .project p {
-  margin: 0;
+  margin: 10px 2px;
 }
 
 .project div {
