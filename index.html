@@ -12,7 +12,9 @@
         <link rel="manifest" href="/manifest.json">
     </head>
     <body>
-        <div id="particle-background"></div>
+        <div id="particle-background">
+            <img src="footer2.png">
+        </div>
         <div id="header-outer">
             <div id="header" class="animated fadeInDown slow">
                 <div class="header-elements" id="header-box">
@@ -22,22 +24,9 @@
                     </div>
                 </div>
                 <img class="header-elements" id="llama-image" src="llama.png"></img>
-                <div id="tagline-mobile">
-                    <ul class="tagline animated fadeInDown slower delay-1s">
-                        <li><a href="#about">About</a></li><!--
-                     --><li><a href="#projects">Projects</a></li><!--
-                     --><li><a href="#online">Online</a></li>
-                    </ul>
-                </div>
             </div>
         </div>
-        <div id="tagline-desktop">
-            <ul class="tagline animated fadeInDown slower delay-1s">
-                <li><a href="#about">About</a></li><!--
-             --><li><a href="#projects">Projects</a></li><!--
-             --><li><a href="#online">Online</a></li>
-            </ul>
-        </div>
+        <div id="header-offset"></div>
         <h2 id="about">About Me</h2>
         <p>My name is Daniel and I am a computer science student at -Ask me again in 2 months-. My skills lie within web development and AI but I'm always up to exploring new fields.</p>
         <p>When I'm not sat in front of a monitor, I enjoy photography, gaming and hiking (that fancy looking footer is adapted from a photo of me part way up mount snowdon).</p>
@@ -65,11 +54,10 @@
         <a href="https://instagram.com/obr.photography/" target="_blank"><img class="logo-social" src="logos/instagram-logo.png"></a>
         <a href="https://www.linkedin.com/in/daniel-o-brien-a4b80512a/" target="_blank"><img class="logo-social" src="logos/linkedin-logo.png"></a>
         <hr>
-        <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries at dob9601@gmail.com</a></i></p>
-        <img id="footer-image" src="footer.png">
+        <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries.</a></i></p>
         <script>
             var scroll = new SmoothScroll('a[href*="#"]', {easing: 'easeInOutQuad'})
-            particlesJS.load('particle-background', 'assets/particles.json')
+            //particlesJS.load('particle-background', 'assets/particles.json')
         </script>
     </body>
 </html>
