@@ -1,8 +1,8 @@
 {
   "name": "Daniel O'Brien",
   "short_name": "dob9601",
-  "theme_color": "#ff9e6f",
-  "background_color": "#feceb7",
+  "theme_color": "#ef4539",
+  "background_color": "#ef4539",
   "display": "fullscreen",
   "Scope": "/",
   "start_url": "/",
