@@ -20,8 +20,9 @@
         window.addEventListener('scroll', () => {
            let parent = document.getElementById('background');
            let children = parent.children
+           const speed = 0.2 * (window.innerWidth / window.innerHeight)
            for(let i = 0; i < 3; i++) {
-             children[i].style.transform = 'translateY(' + (0.15 * window.pageYOffset * (1/(i+1)) * children.length) + 'px)';
+             children[i].style.transform = 'translateY(' + (speed * window.pageYOffset * (1/(i+1)) * children.length) + 'px)';
            }
         }, false)            
         </script>
