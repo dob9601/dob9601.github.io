@@ -45,6 +45,7 @@ h2 {
   height: 100vh;
   background-color: #feceb7;
   overflow: hidden;
+  user-select: none;
 }
 
 #background img {
