@@ -45,7 +45,14 @@ h2 {
   height: 100vh;
   background-color: #feceb7;
   overflow: hidden;
+}
+
+#background * {
   user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 #background img {
