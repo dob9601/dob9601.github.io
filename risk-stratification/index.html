@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Risk Stratification</title>
+        <link href="https://fonts.googleapis.com/css?family=Cousine:700|Roboto+Slab" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Risk stratification of patients with autoimmune rheumatic disease</h1> 
+        <h2>Adapted from BSR website</h2>
+        <form id="form">
+            <div>
+                <label for="factor-1">Corticosteroid dose of &geq;20mg (0.5mg/kg) prednisolone (or equivalent) per day for more than four weeks</label>
+                <input type="checkbox" id="factor-1">
+            </div>
+            <div>
+                <label for="factor-2">Corticosteroid dose of &geq;5mg prednisolone but &lt;20mg (or equivalent) per day for more than four weeks</label>
+                <input type="checkbox" id="factor-2">
+            </div>
+            <div>
+                <label for="factor-3">Cyclophosphamide at any dose orally or IV within last six months</label>
+                <input type="checkbox" id="factor-3">
+            </div>
+            <div>
+                <label for="factor-4">Rituxumab in the last 12 months</label>
+                <input type="checkbox" id="factor-4">
+            </div>
+            <div>
+                <label for="factor-5">One immunosuppressive medication*, biologic/monoclonal** or small molecule immunosuppressant***</label>
+                <input type="checkbox" id="factor-5">
+            </div>
+            <div>
+                <label for="factor-6">Two or more immunosuppressive medication*, biologic/monoclonal** or small molecule immunosuppressant***</label>
+                <input type="checkbox" id="factor-6">
+            </div>
+            <div>
+                <label for="factor-7">Any one or more of these: age &gt;70, Diabetes Mellitus, pre-existing lung disease, renal impairment, history of ischaemic heart disease or hypertension</label>
+                <input type="checkbox" id="factor-7">
+            </div>
+            <div>
+                <label for="factor-8">Hydroxychloroquine, Sulfalsalazine alone or in combination</label>
+                <input type="checkbox" id="factor-8">
+            </div>
+        </form>
+        <div id="result">
+
+        </div>
+        <script>
+            const form = document.getElementById('form')
+            const factors = [3, 2, 3, 3, 1, 2, 1, 0]
+            const checkboxes = form.querySelectorAll('input[type=checkbox]')
+            const resultDiv = document.getElementById('result')
+
+            form.addEventListener('click', function () {
+                var score = 0
+
+                for (var i=0; i<checkboxes.length; i++) {
+                    var checkbox = checkboxes[i]
+                    score += (checkbox.checked ? 1 : 0) * factors[i]
+                }
+
+                if (score >= 3) {
+                    resultDiv.innerHTML = 'Definite High Risk - Patients to shield/self-isolate for 12 weeks'
+                    resultDiv.style.backgroundColor = "#c0392b"
+                } else if (score === 2) {
+                    resultDiv.innerHTML = 'Moderate Risk - Patients to self-isolate if other concerns or high risk circumstances. Maintain enhanced social distancing'
+                    resultDiv.style.backgroundColor = "#ff9800"
+                } else {
+                    resultDiv.innerHTML = 'Low Risk - Patients to maintain enhanced social distancing'
+                    resultDiv.style.backgroundColor = "#4caf50"
+                }
+            })
+        </script>
+        <p class="sub-text">* Immunosuppressive medications include: Azathioprine, Leflunomide, Methotrexate, Mycophenolate (mycophenolate mofetil or mycophenolic acid), ciclosporin, Tacrolimus, Sirolimus. It does NOT include Hydroxychloroquine or Sulphasalazine, either alone or in combination</p>
+        <p class="sub-text">** Biologic/monoclonal includes: rituximab; all anti-TNF drugs (etanercept, adalimumab, infliximab, golimumab, certolizumab and biosimilar variants of all of these); Tociluzimab; Abatacept; Belimumab; Anakinra; Seukinumab; Ixekizumab; Ustekinumab; Sarilumumab; Canakinumab</p>
+        <p class="sub-text">*** Small molecules includes: all JAK inhibitors &#8212; baracitinib, tofacitinib etc.</p>
+    </body>
+</html>

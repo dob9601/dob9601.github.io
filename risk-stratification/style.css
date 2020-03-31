@@ -1,0 +1,61 @@
+h1,
+h2 {
+  font-family: 'Cousine', monospace;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  color: #c0392b;
+  margin-bottom: 20px;
+}
+
+body {
+  font-size: 1.2em;
+  margin: 20px;
+  background-color: #ecf0f1;
+  color: #2f3640;
+  font-family: 'Roboto Slab', serif;
+}
+
+label {
+  width: 95%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+form div {
+  margin: 0 auto 20px 0;
+  transition: background-color 0.2s linear;
+  padding: 5px;
+  cursor: pointer;
+}
+
+form div:hover {
+  background-color: #d2d2d2;
+}
+
+#result {
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border: 3px solid #2f3640;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.2s linear;
+}
+
+input[type='checkbox']:checked {
+  background-color: #2f3640;
+}
+
+.sub-text {
+  font-size: 0.8em;
+}
