@@ -51,24 +51,31 @@
             const checkboxes = form.querySelectorAll('input[type=checkbox]')
             const resultDiv = document.getElementById('result')
 
+            var inputTicked = false
+
             form.addEventListener('click', function () {
                 var score = 0
 
                 for (var i=0; i<checkboxes.length; i++) {
                     var checkbox = checkboxes[i]
+                    if (checkbox.checked) {
+                        inputTicked = true
+                    }
                     score += (checkbox.checked ? 1 : 0) * factors[i]
                 }
 
-                if (score >= 3) {
-                    resultDiv.innerHTML = 'Definite High Risk - Patients to shield/self-isolate for 12 weeks'
-                    resultDiv.style.backgroundColor = "#c0392b"
-                } else if (score === 2) {
-                    resultDiv.innerHTML = 'Moderate Risk - Patients to self-isolate if other concerns or high risk circumstances. Maintain enhanced social distancing'
-                    resultDiv.style.backgroundColor = "#ff9800"
-                } else {
-                    resultDiv.innerHTML = 'Low Risk - Patients to maintain enhanced social distancing'
-                    resultDiv.style.backgroundColor = "#4caf50"
-                }
+                if (inputTicked) {
+                    if (score >= 3) {
+                        resultDiv.innerHTML = 'Definite High Risk - Patients to shield/self-isolate for 12 weeks'
+                        resultDiv.style.backgroundColor = "#c0392b"
+                    } else if (score === 2) {
+                        resultDiv.innerHTML = 'Moderate Risk - Patients to self-isolate if other concerns or high risk circumstances. Maintain enhanced social distancing'
+                        resultDiv.style.backgroundColor = "#ff9800"
+                    } else {
+                        resultDiv.innerHTML = 'Low Risk - Patients to maintain enhanced social distancing'
+                        resultDiv.style.backgroundColor = "#4caf50"
+                    }    
+                }       
             })
         </script>
         <p class="sub-text">* Immunosuppressive medications include: Azathioprine, Leflunomide, Methotrexate, Mycophenolate (mycophenolate mofetil or mycophenolic acid), ciclosporin, Tacrolimus, Sirolimus. It does NOT include Hydroxychloroquine or Sulphasalazine, either alone or in combination</p>
