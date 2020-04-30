@@ -43,28 +43,34 @@
         <p>My name is Daniel, and I am a British student programming in my spare time since I was 11. After realising that I wasn't that bad at it, I decided it was the career for me and chose to enroll in a Computer Science degree at The University of York.</p>
         <p>When I'm not sat trying to figure out the intricate process of writing an about me page, I enjoy (programming), swimming, gaming and hiking.</p>
         <hr>
-        <h2 id="projects">Projects</h2>
-        <p>Below are some projects I have worked on over the years:</p>
-        <ul id="current-projects">
-            <li class="project"><a href="https://github.com/dob9601/CollaboDev" target="_blank">
-                <div>
-                    <img src="project_logos/collabodev.png">
-                    <p>CollaboDev</p>
-                </div>
-            </a></li>
-            <li class="project"><a href="https://github.com/dob9601/CoWrite" target="_blank">
-                <div>
-                    <img src="project_logos/cowrite.png">
-                    <p>Cowrite</p>
-                </div>
-            </a></li>
-            <li class="project"><a href="/projects/hsfn" target="_blank">
-                <div>
-                    <img src="project_logos/hacksoc-filmnight.png">
-                    <p>HackSoc Filmnight</p>
-                </div>
-            </a></li>
-        </ul>
+        <h2 id="projects">GitHub Projects</h2>
+        <p>Below is a list of projects I've created/contributed to on GitHub:</p>
+        <ul id="current-projects"></ul>
+        <p class="fork-warning">*This repo is a fork of someone else's work</p>
+        <script>
+            var projectsDiv = document.getElementById('current-projects');
+            var request = new XMLHttpRequest()
+            request.addEventListener('load', function () {
+                var response = JSON.parse(request.response)
+                for (i in response) {
+                    var repo = response[i]
+                    var repoHtml = ''
+                    if (repo.description === null) {
+                        repo.description = '<b>This repository has no description available</b>'
+                    }
+                    if (repo.fork) {
+                        repo.name += '*'
+                    }
+                    repoHtml += '<li class="project"><a href="' + repo.html_url + '" target="_blank"><h3>' + repo.name + '</h3><p class="repo-description"><i>' + repo.description + '</i></p>'
+                    repoHtml += '</a></li>'
+
+                    projectsDiv.innerHTML += repoHtml
+                }
+            })
+            request.open('GET', 'https://api.github.com/users/dob9601/repos')
+            request.send()
+            console.log('Yeet')
+        </script>
         <hr>
         <h2 id="other-work">Other Work</h2>
         <ul id="other-work-list">
@@ -76,7 +82,7 @@
         <h2 id="online">Find Me Online</h2>
         <a href="https://www.quora.com/profile/Daniel-OBrien-60" target="_blank"><img class="logo-social" src="logos/quora-logo.png"></a>
         <a href="https://github.com/dob9601/" target="_blank"><img class="logo-social" src="logos/github-logo.png"></a>
-        <a href="https://instagram.com/obr.photography/" target="_blank"><img class="logo-social" src="logos/instagram-logo.png"></a>
+        <a href="https://instagram.com/0briend/" target="_blank"><img class="logo-social" src="logos/instagram-logo.png"></a>
         <a href="https://www.linkedin.com/in/daniel-o-brien-a4b80512a/" target="_blank"><img class="logo-social" src="logos/linkedin-logo.png"></a>
         <a href="https://gurushots.com/obr.photography/" target="_blank"><img class="logo-social" src="logos/gurushots-logo.png"></a>
         <hr>
