@@ -26,6 +26,22 @@
         <script>
             if (nightMode) {
                 const starDiv = document.getElementById('stars')
+
+                for (var i=0; i<100; i++) {
+                    var xPos = Math.random() * starDiv.offsetWidth
+                    var yPos = Math.random() * starDiv.offsetHeight
+                    starDiv.innerHTML += '<div class="star" id="star-' + i.toString() + '" style="left: ' + xPos.toString() + 'px; top: ' + yPos.toString() + 'px"></div>'
+                }
+                var starIndex = 0
+
+                function starStart () {
+                    document.getElementById('star-'+starIndex.toString()).style.animationPlayState = 'running'
+                    starIndex += 1
+                    if (starIndex < 100) {
+                        setTimeout( function () {starStart()}, Math.random() * 150)
+                    }
+                }
+                starStart()
             }
         </script>
         <div id="background">

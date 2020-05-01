@@ -14,3 +14,39 @@
 #header {
   color: #f7f7f7;
 }
+
+.star {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  animation: starAnimation 1s infinite alternate;
+  animation-delay: 3s;
+  animation-play-state: paused;
+}
+
+#stars {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+#background img {
+  z-index: 2;
+}
+
+#header {
+  z-index: 2;
+}
+
+@keyframes starAnimation {
+  from {
+    width: 1px;
+    height: 1px;
+  }
+  to {
+    width: 2px;
+    height: 2px;
+  }
+}
