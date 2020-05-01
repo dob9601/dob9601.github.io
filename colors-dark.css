@@ -21,14 +21,14 @@
   position: absolute;
   background-color: #fff;
   z-index: 1;
-  animation: starAnimation 1s infinite alternate;
+  animation: starAnimation 2s infinite alternate;
   animation-delay: 3s;
   animation-play-state: paused;
 }
 
 #stars {
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
   position: absolute;
 }
 
@@ -44,9 +44,11 @@
   from {
     width: 1px;
     height: 1px;
+    text-shadow: none;
   }
   to {
     width: 2px;
     height: 2px;
+    text-shadow: 2px 2px 2px #fff;
   }
 }
