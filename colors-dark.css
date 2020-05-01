@@ -4,5 +4,25 @@
   --color-2: #074485;
   --color-3: #390357;
   --color-4: #170138;
-  --color-5: #000000;
+  --color-5: #000;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+@keyframes starTwinkle {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(2, 2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
