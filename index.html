@@ -11,7 +11,7 @@
         <script>
             var time = new Date()
 
-            const nightMode = (time.getHours() <= 6 || time.getHours() >= 21)
+            const nightMode = true //(time.getHours() <= 6 || time.getHours() >= 21)
 
             var stylesheet = 'colors-light.css'
             if (nightMode) {
@@ -23,10 +23,22 @@
     </head>
     <body>
         <div id="background">
-            <img src="footer/3.png">
-            <img src="footer/2.png">
-            <img src="footer/1.png">
-            <img src="footer/0.png">
+            <img src="">
+            <img src="">
+            <img src="">
+            <img src="">
+            <script>
+                var path = 'background_light'
+                if (nightMode) {
+                    path = 'background_dark'
+                }
+
+                var backgroundDiv = document.getElementById('background')
+                for (i in backgroundDiv.children) {
+                    var element = backgroundDiv.children[i]
+                    element.src = path + '/' + (3-i).toString() + '.png'
+                }
+            </script>
         </div>
         <script>
             window.addEventListener('scroll', () => {
