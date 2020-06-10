@@ -11,7 +11,7 @@
         <script>
             var time = new Date()
 
-            const nightMode = true //(time.getHours() <= 6 || time.getHours() >= 21)
+            const nightMode = (time.getHours() <= 6 || time.getHours() >= 21)
 
             var stylesheet = 'colors-light.css'
             if (nightMode) {
@@ -22,6 +22,7 @@
         </script>
     </head>
     <body>
+        <div id="nightToggle"><p>Night Mode <span id="nightModeState">on</span></p></div>
         <div id="stars"></div>
         <script>
             if (nightMode) {
