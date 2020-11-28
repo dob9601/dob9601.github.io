@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ff9e6f">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:700" rel="stylesheet">
+        <link rel="manifest" href="manifest.json">
+        <script>
+            var time = new Date()
+            const nightMode = (time.getHours() <= 6 || time.getHours() >= 21)
+
+            var stylesheet = 'colors-light.css'
+            if (nightMode) {
+                stylesheet = 'colors-dark.css'
+            }
+
+            document.write('<link rel="stylesheet" type="text/css" href="css/'+ stylesheet +'">')
+        </script>
+    </head>
+    <body>
+        <div id="stars"></div>
+        <script>
+            if (nightMode) {
+                const starDiv = document.getElementById('stars')
+
+                for (var i=0; i<100; i++) {
+                    var xPos = Math.random() * starDiv.offsetWidth
+                    var yPos = Math.random() * starDiv.offsetHeight
+                    starDiv.innerHTML += '<div class="star" id="star-' + i.toString() + '" style="left: ' + xPos.toString() + 'px; top: ' + yPos.toString() + 'px"></div>'
+                }
+                var starIndex = 0
+
+                function starStart () {
+                    document.getElementById('star-'+starIndex.toString()).style.animationPlayState = 'running'
+                    starIndex += 1
+                    if (starIndex < 100) {
+                        setTimeout( function () {starStart()}, Math.random() * 150)
+                    }
+                }
+                starStart()
+            }
+        </script>
+        <div id="background">
+            <img>
+            <img>
+            <img>
+            <img>
+            <script>
+                var path = 'images/'
+                if (nightMode) {
+                    path += 'background_dark'
+                } else {
+                    path += 'background_light'
+                }
+
+                var backgroundDiv = document.getElementById('background')
+                for (i in backgroundDiv.children) {
+                    var element = backgroundDiv.children[i]
+                    element.src = path + '/' + (3-i).toString() + '.png'
+                }
+            </script>
+        </div>
+        <script>
+            window.addEventListener('scroll', () => {
+                let parent = document.getElementById('background');
+                let children = parent.children
+                const speed = 0.2 * (window.innerWidth / window.innerHeight)
+                for(let i = 0; i < 3; i++) {
+                    children[i].style.transform = 'translateY(' + (speed * window.pageYOffset * (1/(i+1)) * children.length) + 'px)';
+                }
+            }, false)            
+        </script>
+        <div id="header-outer">
+            <div id="header" class="animated fadeInDown slow">
+                <div class="header-elements" id="header-box">
+                    <div>
+                        <h1>DOB9601</h1>
+                        <h2 id="fullname-text"><i>Daniel O'Brien</i></h2>
+                    </div>
+                </div>
+                <img class="header-elements" id="llama-image" src="images/llama.png"></img>
+            </div>
+        </div>
+        <div id="header-offset"></div>
+        <h2 id="about">About Me</h2>
+        <p><i>After deciding it was unlikely I'd ever become an astronaut, partly down to my claustrophobia, I turned my head towards software development instead.</i></p>
+        <p>My name is Daniel, I'm a computer science student at the University of York and I've been programming in my spare time since I was 11.</p>
+        <p>When I'm not sat trying to figure out the intricate process of writing an about me page, I enjoy (programming), swimming, gaming and hiking.</p>
+        <hr>
+        <h2 id="projects">GitHub Projects</h2>
+        <p>Below is a list of projects I've created/contributed to on GitHub:</p>
+        <ul id="current-projects"></ul>
+        <p class="fork-warning">*This repo is a fork of someone else's work</p>
+        <script>
+            var projectsDiv = document.getElementById('current-projects');
+            var request = new XMLHttpRequest()
+            request.addEventListener('load', function () {
+                var response = JSON.parse(request.response)
+                for (i in response) {
+                    var repo = response[i]
+                    var repoHtml = ''
+                    if (repo.description === null) {
+                        repo.description = '<b>This repository has no description available</b>'
+                    }
+                    if (repo.fork) {
+                        repo.name += '*'
+                    }
+                    repoHtml += '<li class="project"><a href="' + repo.html_url + '" target="_blank"><h3>' + repo.name + '</h3><p class="repo-description"><i>' + repo.description + '</i></p>'
+                    repoHtml += '</a></li>'
+
+                    projectsDiv.innerHTML += repoHtml
+                }
+            })
+            request.open('GET', 'https://api.github.com/users/dob9601/repos')
+            request.send()
+        </script>
+        <hr>
+        <h2 id="other-work">Other Work</h2>
+        <p>Below are projects I've worked on that are either not visible on GitHub, or hosted on another account</p>
+        <ul id="other-work-list">
+            <li><h3>Custom Spotify theme through injecting CSS via Spicetify</h3><img class="other-work-img" src="images/other_work/dobbo.png"></li>
+        </ul>
+        <hr>
+        <h2 id="online">Find Me Online</h2>
+        <a href="https://www.quora.com/profile/Daniel-OBrien-60" target="_blank"><img class="logo-social" src="images/logos/quora-logo.png"></a>
+        <a href="https://github.com/dob9601/" target="_blank"><img class="logo-social" src="images/logos/github-logo.png"></a>
+        <a href="https://instagram.com/0briend/" target="_blank"><img class="logo-social" src="images/logos/instagram-logo.png"></a>
+        <a href="https://www.linkedin.com/in/daniel-o-brien-a4b80512a/" target="_blank"><img class="logo-social" src="images/logos/linkedin-logo.png"></a>
+        <a href="https://gurushots.com/obr.photography/" target="_blank"><img class="logo-social" src="images/logos/gurushots-logo.png"></a>
+        <hr>
+        <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries.</a></i></p>
+    </body>
+</html>
