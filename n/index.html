@@ -4,6 +4,7 @@
         <title>About Me</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="theme-color" content="#ff9e6f">
+        <meta charset="utf-8">
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="css/animate.min.css" rel="stylesheet">
@@ -45,9 +46,9 @@
             }
         </script>
         <div id="background">
-            <img>
-            <img>
-            <img>
+            <img class="parallax" data-rellax-speed="-10">
+            <img class="parallax" data-rellax-speed="-8">
+            <img class="parallax" data-rellax-speed="-6">
             <img>
             <script>
                 var path = 'images/'
@@ -64,15 +65,12 @@
                 }
             </script>
         </div>
+        <script src="js/relax.min.js"></script>
         <script>
-            window.addEventListener('scroll', () => {
-                let parent = document.getElementById('background');
-                let children = parent.children
-                const speed = 0.2 * (window.innerWidth / window.innerHeight)
-                for(let i = 0; i < 3; i++) {
-                    children[i].style.transform = 'translateY(' + (speed * window.pageYOffset * (1/(i+1)) * children.length) + 'px)';
-                }
-            }, false)            
+            const parallaxChildren = document.getElementById('background').children
+            const speed = 0.2 * (window.innerWidth / window.innerHeight)
+
+            var rellax = new Rellax('.parallax')
         </script>
         <div id="header-outer">
             <div id="header" class="animated fadeInDown slow">
