@@ -8,6 +8,11 @@
   color: var(--color-2);
 }
 
+#tagline {
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
 html {
   height: 100%;
   margin: 0;
@@ -184,11 +189,6 @@ hr {
 
 .project:hover {
   background-color: var(--color-1-translucent);
-}
-
-.fork-warning {
-  font-size: 0.8em;
-  text-transform: uppercase;
 }
 
 .repo-description {

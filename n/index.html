@@ -85,14 +85,13 @@
         </div>
         <div id="header-offset"></div>
         <h2 id="about">About Me</h2>
-        <p><i>After deciding it was unlikely I'd ever become an astronaut, partly down to my claustrophobia, I turned my head towards software development instead.</i></p>
-        <p>My name is Daniel, I'm a computer science student at the University of York and I've been programming in my spare time since I was 11.</p>
-        <p>When I'm not sat trying to figure out the intricate process of writing an about me page, I enjoy (programming), swimming, gaming and hiking.</p>
+        <p id="tagline"><i>Software Dev / Student / Discord Bot Enthusiast</i></p>
+        <p>Hi! I'm a computer science student at the University of York, software engineer at Genomics PLC and the developer of the <a target="_blank" href="https://purnell.xyz">Purnell Discord bot</a>.</p>
+        <p>When I'm not sat around trying to figure out how to write an about me page, I enjoy (writing code), swimming, gaming and hiking.</p>
         <hr>
         <h2 id="projects">GitHub Projects</h2>
         <p>Below is a list of projects I've created/contributed to on GitHub:</p>
         <ul id="current-projects"></ul>
-        <p class="fork-warning">*This repo is a fork of someone else's work</p>
         <script>
             var projectsDiv = document.getElementById('current-projects');
             var request = new XMLHttpRequest()
@@ -116,13 +115,6 @@
             request.open('GET', 'https://api.github.com/users/dob9601/repos')
             request.send()
         </script>
-        <hr>
-        <h2 id="other-work">Other Work</h2>
-        <p>Below are projects I've worked on that are either not visible on GitHub, or hosted on another account</p>
-        <ul id="other-work-list">
-            <li><h3>Custom Spotify theme through injecting CSS via Spicetify</h3><img class="other-work-img" src="images/other_work/dobbo.png"></li>
-            <li><h3>Philmnight (formerly HackSoc Filmnight)</h3></li>
-        </ul>
         <hr>
         <h2 id="online">Find Me Online</h2>
         <a href="https://www.quora.com/profile/Daniel-OBrien-60" target="_blank"><img class="logo-social" src="images/logos/quora-logo.png"></a>
