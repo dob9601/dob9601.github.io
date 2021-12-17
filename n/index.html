@@ -103,9 +103,6 @@
                     if (repo.description === null) {
                         repo.description = '<b>This repository has no description available</b>'
                     }
-                    if (repo.fork) {
-                        repo.name += '*'
-                    }
                     repoHtml += '<li class="project"><a href="' + repo.html_url + '" target="_blank"><h3>' + repo.name + '</h3><p class="repo-description"><i>' + repo.description + '</i></p>'
                     repoHtml += '</a></li>'
 
@@ -117,11 +114,9 @@
         </script>
         <hr>
         <h2 id="online">Find Me Online</h2>
-        <a href="https://www.quora.com/profile/Daniel-OBrien-60" target="_blank"><img class="logo-social" src="images/logos/quora-logo.png"></a>
         <a href="https://github.com/dob9601/" target="_blank"><img class="logo-social" src="images/logos/github-logo.png"></a>
         <a href="https://instagram.com/0briend/" target="_blank"><img class="logo-social" src="images/logos/instagram-logo.png"></a>
         <a href="https://www.linkedin.com/in/daniel-o-brien-a4b80512a/" target="_blank"><img class="logo-social" src="images/logos/linkedin-logo.png"></a>
-        <a href="https://gurushots.com/obr.photography/" target="_blank"><img class="logo-social" src="images/logos/gurushots-logo.png"></a>
         <hr>
         <p id="footer-text"><i>Feel free to <a href="mailto:dob9601@gmail.com?subject=About%20Me%20%7C%20Query">contact me</a> with any queries.</a></i></p>
     </body>
