@@ -1,4 +1,4 @@
-import {ParallaxBanner, ParallaxProvider} from "react-scroll-parallax";
+import {ParallaxBanner} from "react-scroll-parallax";
 
 import "./ParallaxMountains.css"
 
