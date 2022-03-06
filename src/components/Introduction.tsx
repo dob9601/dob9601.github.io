@@ -5,7 +5,7 @@ export function Introduction() {
         <div className="Introduction">
             <h2 className="tagline"><i>Software Developer / Student / Discord Bot Enthusiast</i></h2>
             <p>Hey there! I'm a computer science student at the University of York and associate software engineer at Genomics PLC.</p>
-            <p>When I'm not sat around trying to figure out how to write an about me page, I enjoy (writing code), swimming, gaming and hiking.</p>
+            <p>When I'm not sat around trying to figure out how to write an about me page, I enjoy (writing code), swimming, gaming and hiking (yes, that outline is me &#128578;).</p>
         </div>
     )
 }
