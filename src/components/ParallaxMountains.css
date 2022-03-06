@@ -1,0 +1,15 @@
+.MountainParallax {
+  background-color: var(--color-1);
+  aspect-ratio: 16 / 9;
+}
+
+.MountainParallax .Header {
+  text-align: center;
+  color: var(--color-5);
+}
+
+.MountainParallax .HeaderBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

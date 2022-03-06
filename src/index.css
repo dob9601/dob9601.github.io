@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: var(--color-5);
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,4 +22,6 @@ h4,
 h5,
 h6 {
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 3em;
 }
