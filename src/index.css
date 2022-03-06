@@ -9,7 +9,9 @@
 
 body {
   background-color: var(--color-5);
+  color: var(--color-1);
   margin: 0;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,5 +25,16 @@ h5,
 h6 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+}
+
+h1 {
   font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+a {
+  color: var(--color-2);
 }

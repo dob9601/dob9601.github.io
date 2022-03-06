@@ -11,9 +11,9 @@ export function ParallaxMountains() {
     return (
         <>
             <ParallaxBanner
-                className="MountainParallax"
+                className="ParallaxMountains"
                 layers={[
-                    {children: <h1 className="Header">Title</h1>, speed: -300, className: "HeaderBox"},
+                    {children: <h1 className="Header">About Me | Daniel O'Brien</h1>, speed: -300, className: "HeaderBox"},
                     {image: MountainImage0, speed: -225, className: "Mountain", expanded: false},
                     {image: MountainImage1, speed: -150, className: "Mountain", expanded: false},
                     {image: MountainImage2, speed: -75, className: "Mountain", expanded: false},
