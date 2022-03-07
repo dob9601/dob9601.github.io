@@ -1,6 +1,6 @@
 .ParallaxMountains {
   background-color: var(--color-1);
-  aspect-ratio: 16 / 9;
+  height: 100vh;
   margin-bottom: 200px;
 }
 
