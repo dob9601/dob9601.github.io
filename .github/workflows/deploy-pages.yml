@@ -9,6 +9,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
     - name: Build
       uses: borales/actions-yarn@v2.3.0
       with:
