@@ -38,7 +38,7 @@ export function GitHub() {
     return (
         <>
             <h2>GitHub Projects</h2>
-            <p><i>Below is a more comprehensive list of all open-source projects I have contributed to on GitHub</i></p>
+            <p className="GitHubProjectsDescription"><i>Below is a more comprehensive list of all open-source projects I have contributed to on GitHub</i></p>
             <div className="GitHubProjectKeyContainer">
                 <GitHubProjectKey type="Repository" color={DEFAULT_COLOR} />
                 <GitHubProjectKey type="Fork" color={FORK_COLOR} />
