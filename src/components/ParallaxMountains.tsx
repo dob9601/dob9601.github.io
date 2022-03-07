@@ -2,10 +2,10 @@ import {ParallaxBanner} from "react-scroll-parallax";
 
 import "./ParallaxMountains.css"
 
-import MountainImage0 from "./ParallaxMountainsImages/0.png";
-import MountainImage1 from "./ParallaxMountainsImages/1.png";
-import MountainImage2 from "./ParallaxMountainsImages/2.png";
-import MountainImage3 from "./ParallaxMountainsImages/3.png";
+import MountainImage0 from "./parallax-mountains-layers/0.png";
+import MountainImage1 from "./parallax-mountains-layers/1.png";
+import MountainImage2 from "./parallax-mountains-layers/2.png";
+import MountainImage3 from "./parallax-mountains-layers/3.png";
 
 export function ParallaxMountains() {
     return (

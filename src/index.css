@@ -43,3 +43,10 @@ h2 {
 a {
   color: var(--color-2);
 }
+
+hr {
+  width: 70%;
+  border: 0;
+  border-top: 1px solid var(--color-1);
+  margin: 40px auto 0 auto;
+}

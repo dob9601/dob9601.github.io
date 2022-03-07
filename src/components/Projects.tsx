@@ -1,9 +1,9 @@
 import "./Projects.css"
 
-import Purnell from "./project_images/Purnell.png"
-import Ordle from "./project_images/Ordle.png"
-import GitHub from "./project_images/GitHub.png"
-import Philmnight from "./project_images/Philmnight.png"
+import Purnell from "./project-images/Purnell.png"
+import Ordle from "./project-images/Ordle.png"
+import GitHub from "./project-images/GitHub.png"
+import Philmnight from "./project-images/Philmnight.png"
 
 export function Projects() {
     return (
