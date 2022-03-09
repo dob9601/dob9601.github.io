@@ -13,10 +13,10 @@ export function ParallaxMountains() {
             <ParallaxBanner
                 className="ParallaxMountains"
                 layers={[
-                    {children: <h1 className="Header">About Me | Daniel O'Brien</h1>, className: "HeaderBox", translateY: ["-60%", "60%"]},
-                    {image: MountainImage0, className: "Mountain", expanded: false, translateY: ["-100%", "100%"]},
-                    {image: MountainImage1, className: "Mountain", expanded: false, translateY: ["-80%", "80%"]},
-                    {image: MountainImage2, className: "Mountain", expanded: false, translateY: ["-60%", "60%"]},
+                    {children: <h1 className="Header">About Me | Daniel O'Brien</h1>, className: "HeaderBox", translateY: ["-70%", "70%"]},
+                    {image: MountainImage0, className: "Mountain", expanded: false, translateY: ["-130%", "130%"]},
+                    {image: MountainImage1, className: "Mountain", expanded: false, translateY: ["-100%", "100%"]},
+                    {image: MountainImage2, className: "Mountain", expanded: false, translateY: ["-80%", "80%"]},
                     {image: MountainImage3, className: "Mountain", expanded: false},
                 ]}
             />
