@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ParallaxProvider} from 'react-scroll-parallax';
 
-window.history.replaceState({}, "", "n")
+window.history.replaceState({}, "", "/n")
 
 ReactDOM.render(
   <React.StrictMode>
