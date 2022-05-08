@@ -3,9 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {ParallaxProvider} from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 window.history.replaceState({}, "", "/n")
+window.addEventListener("load", function() {
+  setTimeout(function() {
+    // This hides the address bar:
+    window.scrollTo(0, 1);
+  }, 0);
+});
 
 ReactDOM.render(
   <React.StrictMode>
