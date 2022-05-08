@@ -9,17 +9,19 @@ import MountainImage3 from "./parallax-mountains-layers/3.png";
 
 export function ParallaxMountains() {
     return (
-        <div className="ParallaxMountainsOuter">
-            <ParallaxBanner
-                className="ParallaxMountains"
-                layers={[
-                    { children: <h1 className="Header">About Me | Daniel O'Brien</h1>, className: "HeaderBox", translateY: ["-80%", "70%"] },
-                    { image: MountainImage0, className: "Mountain", expanded: false, translateY: ["0%", "150%"], shouldAlwaysCompleteAnimation: true },
-                    { image: MountainImage1, className: "Mountain", expanded: false, translateY: ["0%", "100%"], shouldAlwaysCompleteAnimation: true },
-                    { image: MountainImage2, className: "Mountain", expanded: false, translateY: ["0%", "50%"], shouldAlwaysCompleteAnimation: true },
-                    { image: MountainImage3, className: "Mountain ForegroundMountain", expanded: false },
-                ]}
-            />
-        </div>
+        <>
+            <h1 style={{ visibility: "hidden" }}>Daniel O'Brien | About Me</h1>
+            <div className="ParallaxMountainsOuter">
+                <ParallaxBanner
+                    className="ParallaxMountains"
+                    layers={[
+                        { image: MountainImage0, className: "Mountain", expanded: false, translateY: ["0%", "150%"], shouldAlwaysCompleteAnimation: true },
+                        { image: MountainImage1, className: "Mountain", expanded: false, translateY: ["0%", "100%"], shouldAlwaysCompleteAnimation: true },
+                        { image: MountainImage2, className: "Mountain", expanded: false, translateY: ["0%", "50%"], shouldAlwaysCompleteAnimation: true },
+                        { image: MountainImage3, className: "Mountain ForegroundMountain", expanded: false },
+                    ]}
+                />
+            </div>
+        </>
     )
 }
