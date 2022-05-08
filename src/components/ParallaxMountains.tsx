@@ -10,7 +10,7 @@ import MountainImage3 from "./parallax-mountains-layers/3.png";
 export function ParallaxMountains() {
     return (
         <>
-            <h1 style={{ visibility: "hidden" }}>Daniel O'Brien | About Me</h1>
+            <h1 style={{ display: "none" }}>Daniel O'Brien | About Me</h1>
             <div className="ParallaxMountainsOuter">
                 <ParallaxBanner
                     className="ParallaxMountains"
