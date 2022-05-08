@@ -1,7 +1,17 @@
-.ParallaxMountains {
-  background-color: var(--color-1);
+.ParallaxMountainsOuter {
   height: 100vh;
-  margin-bottom: 200px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--color-1);
+  margin-bottom: 100px;
+}
+
+.ForegroundMountain {
+  will-change: unset !important;
+}
+
+.ParallaxMountains {
+  aspect-ratio: 16 / 9;
 }
 
 .ParallaxMountains .Header {
