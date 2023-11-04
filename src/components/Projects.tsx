@@ -4,6 +4,7 @@ import Purnell from "./project-images/Purnell.png"
 import Ordle from "./project-images/Ordle.png"
 import GitHub from "./project-images/GitHub.png"
 import Philmnight from "./project-images/Philmnight.png"
+import OmniLFG from "./project-images/OmniLFG.png"
 
 export function Projects() {
     return (
@@ -14,7 +15,7 @@ export function Projects() {
                     name="Purnell"
                     link="https://purnell.xyz"
                     image_url={Purnell}
-                    description="A Discord LFG (Looking for Game bot) active in over 250 servers" />
+                    description="A Discord LFG (Looking for Game bot) active in over 330 servers" />
                 <Project
                     name="Ordle"
                     link="https://ordle.xyz"
@@ -24,6 +25,11 @@ export function Projects() {
                     name="Jointhedots"
                     link="https://github.com/dob9601/jointhedots"
                     description="An open-source git-based dotfile manager written in Rust!" />
+                <Project
+                    name="OmniLFG"
+                    link="https://omnilfg.com"
+                    description="The successor to Purnell, a complete rewrite in Rust with a microservice-based architecture"
+                    image_url={OmniLFG} />
                 <Project
                     name="Philmnight"
                     link="https://github.com/hacksoc/philmnight"

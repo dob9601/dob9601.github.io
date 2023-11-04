@@ -5,3 +5,12 @@
 .Introduction p {
   margin: 20px;
 }
+
+.Introduction .career {
+  text-align: left;
+}
+
+.Introduction .careerContainer {
+  display: flex;
+  justify-content: center;
+}
