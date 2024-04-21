@@ -9,18 +9,18 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+    - uses: pnpm/action-setup@v3
+      with:
+        version: 8
+
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Install
-      uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: install
+    - name: Install Dependencies
+      run: pnpm install
 
-    - name: Build
-      uses: borales/actions-yarn@v2.3.0
-      with:
-        cmd: build
+    - name: Build App
+      run: pnpm build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
